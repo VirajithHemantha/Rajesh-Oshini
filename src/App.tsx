@@ -172,23 +172,23 @@ export default function WeddingInvitation() {
               <img src={mandalaImage} alt="Mandala" className="w-12 h-12 md:w-20 md:h-20 object-contain mix-blend-multiply mb-1 md:mb-2" />
 
               {/* Side Elephants */}
-              <div className="absolute inset-y-0 -left-10 md:-left-24 lg:-left-32 flex items-center z-0 pointer-events-none">
+              <div className="absolute inset-y-0 -left-6 sm:-left-10 md:-left-24 lg:-left-32 flex items-center z-0 pointer-events-none">
                 <motion.img
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 0.6 }}
                   transition={{ delay: 0.8, duration: 1.2 }}
                   src={elephantLeft}
-                  className="w-20 md:w-32 lg:w-48 h-auto select-none mix-blend-multiply"
+                  className="w-16 sm:w-20 md:w-32 lg:w-48 h-auto select-none mix-blend-multiply"
                   alt=""
                 />
               </div>
-              <div className="absolute inset-y-0 -right-10 md:-right-24 lg:-right-32 flex items-center z-0 pointer-events-none">
+              <div className="absolute inset-y-0 -right-6 sm:-right-10 md:-right-24 lg:-right-32 flex items-center z-0 pointer-events-none">
                 <motion.img
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 0.6 }}
                   transition={{ delay: 0.8, duration: 1.2 }}
                   src={elephantRight}
-                  className="w-20 md:w-32 lg:w-48 h-auto select-none mix-blend-multiply"
+                  className="w-16 sm:w-20 md:w-32 lg:w-48 h-auto select-none mix-blend-multiply"
                   alt=""
                 />
               </div>
