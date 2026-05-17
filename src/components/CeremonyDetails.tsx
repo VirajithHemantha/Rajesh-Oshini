@@ -110,10 +110,10 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                     </div>
                     <div>
                       <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-beige-deep transition-colors duration-500">
-                        Poruwa Ceremony & Reception
+                        Poruwa Ceremony & Wedding Function
                       </h4>
                       <p className="text-stone-600/90 text-base sm:text-lg font-serif mb-1">
-                        <span className="font-bold">Time:</span> Poruwa Ceremony commences at 11.04 am, followed by the reception.
+                        <span className="font-bold">Time:</span> Poruwa Ceremony commences at 11.04 am, followed by the wedding function.
                       </p>
                       <p className="text-stone-600/90 text-base sm:text-lg font-serif">
                         <span className="font-bold">Venue:</span> Senuri Grand Castello, Divulapitiya
@@ -209,9 +209,9 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                   <Sparkles className="w-4 h-4 text-brand-gold animate-pulse flex-shrink-0" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-display text-2xl sm:text-4xl text-stone-800 mb-1 sm:mb-2 tracking-tight">Poruwa Ceremony & Reception Function</h4>
+                  <h4 className="font-display text-2xl sm:text-4xl text-stone-800 mb-1 sm:mb-2 tracking-tight">Poruwa Ceremony & Wedding Function</h4>
                   <p className="text-stone-500/90 font-serif text-base sm:text-lg leading-relaxed">
-                    Poruwa Ceremony commences at 11.04 am, followed by the reception at Senuri Grand Castello, Divulapitiya.
+                    Poruwa Ceremony commences at 11.04 am, followed by the wedding function at Senuri Grand Castello, Divulapitiya.
                   </p>
                 </div>
                 <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-brand-champagne rounded-full border border-brand-beige/30 shadow-sm self-start sm:self-center flex-shrink-0">

@@ -39,7 +39,7 @@ export default function App() {
   const fullInviteeName = `${titleParam} ${nameParam}`.trim();
 
   let eventLabel = 'Our Wedding Celebrations';
-  if (eventParam === 'poruwa') eventLabel = 'Poruwa Ceremony & Reception Function';
+  if (eventParam === 'poruwa') eventLabel = 'Poruwa Ceremony & Wedding Function';
   if (eventParam === 'homecoming') eventLabel = 'Homecoming Function';
   if (eventParam === 'both') eventLabel = 'Wedding & Homecoming Celebrations';
 

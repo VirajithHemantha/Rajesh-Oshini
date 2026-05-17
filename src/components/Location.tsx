@@ -22,7 +22,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   if (currentTab === 'poruwa') {
     venueName = "Senuri Grand Castello";
     venueCity = "Divulapitiya";
-    venueQuote = `"A serene and elegant setting where we will celebrate our wedding reception with joy and laughter."`;
+    venueQuote = `"A serene and elegant setting where we will celebrate our wedding function with joy and laughter."`;
     liveLocationUrl = "https://maps.app.goo.gl/Hs11bevLcqMhV1od6";
     mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.464624388344!2d80.0328!3d7.2289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNyAxMyczMy4wIk4gODDCsDAxJzU4LjEiRQ!5e0!3m2!1sen!2slk!4v1711000000000!5m2!1sen!2slk";
   } else if (currentTab === 'homecoming') {
@@ -56,7 +56,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                 currentTab === 'poruwa' ? 'bg-brand-beige-deep text-white shadow-md' : 'text-stone-600 hover:text-stone-900'
               }`}
             >
-              Poruwa Ceremony & Reception Function
+              Poruwa Ceremony & Wedding Function
             </button>
             {event === 'both' && (
               <button

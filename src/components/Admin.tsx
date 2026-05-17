@@ -87,7 +87,7 @@ export const Admin: React.FC = () => {
 
   const getEventLabel = (evt: string) => {
     switch (evt) {
-      case 'poruwa': return 'Poruwa Ceremony & Reception Function';
+      case 'poruwa': return 'Poruwa Ceremony & Wedding Function';
       case 'homecoming': return 'Homecoming Function';
       case 'both': return 'Both Functions';
       default: return evt;
@@ -187,7 +187,7 @@ export const Admin: React.FC = () => {
                 </label>
                 <div className="space-y-3">
                   {[
-                    { id: 'poruwa', label: 'Poruwa Ceremony & Reception Function', desc: 'Senuri Grand Castello, Divulapitiya' },
+                    { id: 'poruwa', label: 'Poruwa Ceremony & Wedding Function', desc: 'Senuri Grand Castello, Divulapitiya' },
                     { id: 'homecoming', label: 'Homecoming Function', desc: 'Jetwing Blue, Negombo' },
                     { id: 'both', label: 'Both Functions', desc: 'Access to all wedding & homecoming celebrations' },
                   ].map((evt) => (
