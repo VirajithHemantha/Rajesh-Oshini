@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 interface EnvelopeOpeningProps {
+  key?: React.Key;
   onComplete: () => void;
   onMusicStart?: () => void;
   event?: string | null;

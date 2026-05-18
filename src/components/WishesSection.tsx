@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, Loader2, Sparkles } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface Wish {
   id: string;
   name: string;
   message: string;
   createdAt: Date;
+}
+
+interface WishesSectionProps {
+  eventParam?: string;
 }
 
 const getRelativeTime = (date: Date) => {
@@ -19,10 +24,11 @@ const getRelativeTime = (date: Date) => {
   return `${Math.floor(hours / 24)}d ago`;
 };
 
-export const WishesSection: React.FC = () => {
+export const WishesSection: React.FC<WishesSectionProps> = ({ eventParam = 'both' }) => {
   const [wishes, setWishes] = useState<Wish[]>([]);
   const [formData, setFormData] = useState({ name: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbyizQH-uGTCiFC0fc8cn7CwWFDN6JfrMaHcI83acPa3k_peT282eupCPsdjilX38nox/exec";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,8 +36,17 @@ export const WishesSection: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate network request latency
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const payload = new FormData();
+      payload.append('sheet', 'WISH');
+      payload.append('name', formData.name);
+      payload.append('message', formData.message);
+      payload.append('event', eventParam);
+
+      await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload,
+      });
 
       const newWish: Wish = {
         id: Date.now().toString(),
@@ -43,8 +58,10 @@ export const WishesSection: React.FC = () => {
       // Prepend the new wish to the list
       setWishes(prev => [newWish, ...prev]);
       setFormData({ name: '', message: '' });
+      toast.success('Your beautiful blessing has been shared!');
     } catch (error) {
       console.error('Error submitting wish: ', error);
+      toast.error('Could not send your wishes. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
