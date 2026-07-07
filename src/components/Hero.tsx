@@ -91,9 +91,9 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both' }) => {
           <div className="relative mb-6 sm:mb-12 w-full flex justify-center py-4 sm:py-10 px-2 overflow-visible">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[125%] h-[150%] sm:h-[160%] bg-gradient-radial from-white/95 via-white/85 to-transparent blur-[40px] sm:blur-[70px] rounded-full pointer-events-none" />
 
-            <h1 className="relative text-5xl sm:text-[7.5rem] lg:text-[10.5rem] font-names text-[#8a5819] font-extrabold leading-normal sm:leading-[0.85] drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)] tracking-normal sm:tracking-tight overflow-visible py-2">
+            <h1 className="relative text-5xl sm:text-[7.5rem] lg:text-[10.5rem] font-names text-[#8a5819] font-normal leading-normal sm:leading-[0.85] drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)] tracking-normal sm:tracking-tight overflow-visible py-2">
               SHASHIKA <br className="sm:hidden" />
-              <span className="text-[#8a5819] font-bold mx-2 sm:mx-8 text-4xl sm:text-[6.5rem] lg:text-[8.5rem] inline-block -translate-y-1 sm:-translate-y-8 drop-shadow-[0_4px_12px_rgba(201,169,110,0.3)]">&</span>
+              <span className="text-[#8a5819] font-normal mx-2 sm:mx-8 text-4xl sm:text-[6.5rem] lg:text-[8.5rem] inline-block -translate-y-1 sm:-translate-y-8 drop-shadow-[0_4px_12px_rgba(201,169,110,0.3)]">&</span>
               <br className="sm:hidden" />
               MALSHA
             </h1>
@@ -140,7 +140,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both' }) => {
       </div>
 
       <motion.div
-        className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer z-30"
+        className="absolute bottom-0 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-30"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.6 }}
@@ -148,7 +148,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both' }) => {
         <span className="text-[9px] sm:text-[10px] font-sans uppercase tracking-[0.5em] text-stone-900 font-extrabold bg-gradient-to-r from-brand-rose via-white to-brand-rose px-5 py-2 rounded-full border border-brand-plum/40 backdrop-blur-md shadow-lg">
           Discover
         </span>
-        <div className="w-[1px] h-10 sm:h-16 bg-gradient-to-b from-brand-plum to-transparent animate-bounce" />
+        <div className="w-[1px] h-6 sm:h-16 bg-gradient-to-b from-brand-plum to-transparent animate-bounce" />
       </motion.div>
     </div>
   );
