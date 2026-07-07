@@ -47,26 +47,41 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                   <Calendar className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    Date: 14-08-2026
+                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-plum transition-colors duration-500">
+                    Friday, August 14
                   </h4>
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">
+                    The Year Two Thousand Twenty Six
+                  </p>
                 </div>
               </div>
 
-              {/* Poruwa Ceremony & Reception */}
+              {/* Time */}
+              <div className="relative group">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                  <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div>
+                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-plum transition-colors duration-500">
+                    From 9.30 AM to 4.00 PM
+                  </h4>
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">
+                    Poruwa Ceremony at 10.15 am, followed by the wedding function
+                  </p>
+                </div>
+              </div>
+
+              {/* Venue */}
               <div className="relative group">
                 <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
                   <MapPin className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-plum transition-colors duration-500">
-                    Poruwa Ceremony & Wedding Function
+                    The Grand Walawwa
                   </h4>
-                  <p className="text-stone-600/90 text-base sm:text-lg font-serif mb-1">
-                    <span className="font-bold">Time:</span> Poruwa Ceremony at 10.15 am, followed by the wedding function.
-                  </p>
-                  <p className="text-stone-600/90 text-base sm:text-lg font-serif">
-                    <span className="font-bold">Venue:</span> The Grand Walawwa, Kegalle
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">
+                    Kegalle
                   </p>
                 </div>
               </div>
