@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Music, VolumeX, Heart } from 'lucide-react';
 import { Hero } from './Hero';
+import { FloatingPetals } from './FloatingPetals';
 import { CoupleDetails } from './CoupleDetails';
 import { CeremonyDetails } from './CeremonyDetails';
 import { Location } from './Location';
@@ -53,6 +54,7 @@ export function InvitationContent({
         )}
       </motion.button>
 
+      <FloatingPetals />
       <Hero event={eventParam} inviteeName={fullInviteeName} />
 
       {fullInviteeName && (
@@ -74,7 +76,7 @@ export function InvitationContent({
       </DeferredMount>
 
       <DeferredMount active={active} delay={240} minHeight="40vh">
-        <div className="py-24 sm:py-32 bg-gradient-to-b from-white via-brand-rose/30 to-brand-blush relative overflow-hidden">
+        <div className="pt-24 pb-12 sm:py-32 bg-gradient-to-b from-white via-brand-rose/30 to-brand-blush relative overflow-hidden">
           <Location event={eventParam} />
         </div>
       </DeferredMount>
@@ -117,9 +119,9 @@ export function InvitationContent({
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-display text-4xl sm:text-5xl text-stone-800 mb-2">Shashika & Malsha</p>
+          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Apsara & Teshan</p>
           <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sans text-stone-400 font-semibold block mb-8">
-            August 14, 2026
+            August 13, 2026
           </span>
         </footer>
       </DeferredMount>

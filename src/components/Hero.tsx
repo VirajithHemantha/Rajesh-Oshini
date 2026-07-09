@@ -60,9 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
         />
       </motion.div>
 
-      <div className="absolute inset-0 z-[5] opacity-70">
-        <FloatingPetals />
-      </div>
+
 
       <div className="absolute inset-5 sm:inset-8 border border-brand-plum/30 rounded-3xl pointer-events-none z-20 hidden sm:block shadow-[inset_0_0_30px_rgba(201,169,110,0.1)]" />
       <div className="absolute inset-6 sm:inset-9 border border-brand-plum/15 rounded-[1.3rem] pointer-events-none z-20 hidden sm:block" />
@@ -93,10 +91,10 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[125%] h-[150%] sm:h-[160%] bg-gradient-radial from-white/95 via-white/85 to-transparent blur-[40px] sm:blur-[70px] rounded-full pointer-events-none" />
 
             <h1 className="relative text-4xl sm:text-[5.5rem] lg:text-[7.5rem] font-names text-[#C9A96E] font-normal leading-normal sm:leading-[0.85] drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)] tracking-normal sm:tracking-tight overflow-visible py-2">
-              SHASHIKA <br className="sm:hidden" />
+              APSARA <br className="sm:hidden" />
               <span className="text-[#C9A96E] font-normal mx-2 sm:mx-6 text-3xl sm:text-[4.5rem] lg:text-[6rem] inline-block -translate-y-1 sm:-translate-y-6 drop-shadow-[0_4px_12px_rgba(201,169,110,0.3)]">&</span>
               <br className="sm:hidden" />
-              MALSHA
+              TESHAN
             </h1>
           </div>
 
@@ -114,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             <div className="px-8 sm:px-16 py-4 sm:py-6 bg-brand-lavender border border-brand-lavender/50 rounded-full whitespace-nowrap flex items-center justify-center">
               <span className="text-[12px] sm:text-2xl font-serif text-brand-blush tracking-[0.1em] sm:tracking-[0.2em] font-bold flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-center">
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand-plum flex-shrink-0" />
-                Friday 14 August 2026 At 10:15 AM
+                Thursday 13 August 2026 At 03:30 PM
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-brand-plum flex-shrink-0" />
               </span>
             </div>
@@ -126,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
         <div className="w-[1px] h-28 bg-gradient-to-b from-transparent via-brand-plum to-transparent" />
         <div className="bg-stone-900/90 backdrop-blur-md px-2.5 py-6 rounded-full border border-brand-plum/40 shadow-xl">
           <p className="writing-mode-vertical text-[11px] uppercase tracking-[0.7em] text-brand-rose font-bold font-sans">
-            The Grand Walawwa • Kegalle
+            St. Mary's Church • Negombo
           </p>
         </div>
         <div className="w-[1px] h-28 bg-gradient-to-t from-transparent via-brand-plum to-transparent" />

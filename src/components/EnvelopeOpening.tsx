@@ -41,7 +41,7 @@ export function EnvelopeOpening({
           width: 100%;
           min-height: 100%;
           margin: 0;
-          background: #fee9e8;
+          background: #fffff4;
         }
 
         .scene {
@@ -66,7 +66,7 @@ export function EnvelopeOpening({
           align-items: center;
           justify-content: center;
           padding: 20px;
-          background: radial-gradient(ellipse at 30% 20%, #fee9e8 0%, #f4c6c6 40%, #b19ab7 100%);
+          background: radial-gradient(ellipse at 30% 20%, #fffff4 0%, #f8dbdf 40%, #f0b9c3 100%);
           perspective: 1500px;
           overflow: hidden;
           font-family: "Cormorant Garamond", serif;
@@ -181,12 +181,12 @@ export function EnvelopeOpening({
         .divider-line {
           width: 50px;
           height: 0.5px;
-          background: linear-gradient(90deg, transparent, #78617d, transparent);
+          background: linear-gradient(90deg, transparent, #b89645, transparent);
         }
         .divider-diamond {
           width: 6px;
           height: 6px;
-          background: #78617d;
+          background: #b89645;
           transform: rotate(45deg);
           opacity: 0.7;
         }
@@ -197,7 +197,7 @@ export function EnvelopeOpening({
           font-size: 10px;
           letter-spacing: 0.45em;
           text-transform: uppercase;
-          color: #78617d;
+          color: #b89645;
           margin-bottom: 20px;
           margin-top: auto;
           z-index: 2;
@@ -205,7 +205,7 @@ export function EnvelopeOpening({
         }
 
         .text-names {
-          font-family: "Great Vibes", cursive;
+          font-family: var(--font-names), "Cinzel Decorative", serif;
           font-size: 60px;
           line-height: 1.1;
           color: #4a3a4d;
@@ -222,7 +222,7 @@ export function EnvelopeOpening({
           font-size: 40px;
           display: block;
           margin: -2px 0;
-          color: #78617d;
+          color: #b89645;
           text-shadow: 0 1px 2px rgba(120,97,125,0.3);
         }
 
@@ -231,7 +231,7 @@ export function EnvelopeOpening({
           font-size: 9.5px;
           letter-spacing: 0.22em;
           text-transform: uppercase;
-          color: #78617d;
+          color: #b89645;
           line-height: 2.2;
           margin-bottom: auto;
           z-index: 2;
@@ -244,7 +244,7 @@ export function EnvelopeOpening({
           font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.28em;
-          color: #78617d;
+          color: #b89645;
         }
 
         .text-church {
@@ -253,7 +253,7 @@ export function EnvelopeOpening({
           font-style: italic;
           font-weight: 400;
           letter-spacing: 0.1em;
-          color: #78617d;
+          color: #b89645;
           margin-top: 4px;
           text-transform: none;
         }
@@ -312,13 +312,13 @@ export function EnvelopeOpening({
           height: 54px;
           background: linear-gradient(
             to bottom, 
-            #a088a6 0%, 
-            #c0aac6 25%, 
-            #b19ab7 50%, 
-            #c0aac6 75%, 
-            #947c9a 100%
+            #ffffff 0%, 
+            #fdfbf7 25%, 
+            #f4eee1 50%, 
+            #fdfbf7 75%, 
+            #e8dfce 100%
           );
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.2);
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.6);
         }
 
         /* Bow Container */
@@ -336,7 +336,7 @@ export function EnvelopeOpening({
           width: 100%;
           height: 100%;
           object-fit: contain;
-          filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
+          filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15)) sepia(0.3) saturate(0.7) brightness(1.1) hue-rotate(350deg);
           transform: scale(1.6);
         }
 
@@ -345,7 +345,7 @@ export function EnvelopeOpening({
           bottom: -60px;
           left: 50%;
           transform: translateX(-50%);
-          color: #78617d;
+          color: #b89645;
           font-family: "Montserrat", sans-serif;
           font-size: 10px;
           letter-spacing: 0.35em;
@@ -413,32 +413,32 @@ export function EnvelopeOpening({
             <div className="card-border">
               {/* 4 Corner Gold Ornaments */}
               <svg className="corner-ornament corner-tl" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#78617d" strokeWidth="0.8" opacity="0.6"/>
-                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#78617d" opacity="0.08"/>
-                <circle cx="5" cy="5" r="2" fill="#78617d" opacity="0.5"/>
-                <path d="M8,5 Q12,8 5,12" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4"/>
-                <path d="M5,8 Q8,12 12,5" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
+                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#b89645" strokeWidth="0.8" opacity="0.6"/>
+                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#b89645" opacity="0.08"/>
+                <circle cx="5" cy="5" r="2" fill="#b89645" opacity="0.5"/>
+                <path d="M8,5 Q12,8 5,12" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                <path d="M5,8 Q8,12 12,5" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
               </svg>
               <svg className="corner-ornament corner-tr" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#78617d" strokeWidth="0.8" opacity="0.6"/>
-                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#78617d" opacity="0.08"/>
-                <circle cx="5" cy="5" r="2" fill="#78617d" opacity="0.5"/>
-                <path d="M8,5 Q12,8 5,12" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4"/>
-                <path d="M5,8 Q8,12 12,5" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
+                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#b89645" strokeWidth="0.8" opacity="0.6"/>
+                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#b89645" opacity="0.08"/>
+                <circle cx="5" cy="5" r="2" fill="#b89645" opacity="0.5"/>
+                <path d="M8,5 Q12,8 5,12" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                <path d="M5,8 Q8,12 12,5" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
               </svg>
               <svg className="corner-ornament corner-bl" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#78617d" strokeWidth="0.8" opacity="0.6"/>
-                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#78617d" opacity="0.08"/>
-                <circle cx="5" cy="5" r="2" fill="#78617d" opacity="0.5"/>
-                <path d="M8,5 Q12,8 5,12" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4"/>
-                <path d="M5,8 Q8,12 12,5" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
+                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#b89645" strokeWidth="0.8" opacity="0.6"/>
+                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#b89645" opacity="0.08"/>
+                <circle cx="5" cy="5" r="2" fill="#b89645" opacity="0.5"/>
+                <path d="M8,5 Q12,8 5,12" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                <path d="M5,8 Q8,12 12,5" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
               </svg>
               <svg className="corner-ornament corner-br" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#78617d" strokeWidth="0.8" opacity="0.6"/>
-                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#78617d" opacity="0.08"/>
-                <circle cx="5" cy="5" r="2" fill="#78617d" opacity="0.5"/>
-                <path d="M8,5 Q12,8 5,12" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4"/>
-                <path d="M5,8 Q8,12 12,5" stroke="#78617d" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
+                <path d="M5,5 L5,25 C5,15 15,5 25,5 L5,5 Z" fill="none" stroke="#b89645" strokeWidth="0.8" opacity="0.6"/>
+                <path d="M5,5 L5,18 C5,12 12,5 18,5 L5,5 Z" fill="#b89645" opacity="0.08"/>
+                <circle cx="5" cy="5" r="2" fill="#b89645" opacity="0.5"/>
+                <path d="M8,5 Q12,8 5,12" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4"/>
+                <path d="M5,8 Q8,12 12,5" stroke="#b89645" strokeWidth="0.5" fill="none" opacity="0.4" className="shimmer"/>
               </svg>
 
               <div className="text-eyebrow">Promise of Love</div>
@@ -450,9 +450,9 @@ export function EnvelopeOpening({
               </div>
 
               <h1 className="text-names">
-                Shashika
+                Apsara
                 <span className="text-ampersand">&</span>
-                Malsha
+                Teshan
               </h1>
 
               <div className="divider">
@@ -463,9 +463,9 @@ export function EnvelopeOpening({
 
               <div className="text-details">
                 Request the honour of your presence<br />
-                <br />
-                <span className="text-church">The Grand Walawwa</span><br />
-                Kegalle
+                as they unite in the sacrament of holy matrimony<br />
+                <span className="text-church">St. Mary's Church</span><br />
+                Negombo
               </div>
             </div>
           </div>
