@@ -25,7 +25,7 @@ export function PhotoGallery({ photos }: { photos: Photo[] }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute bottom-4 left-4 right-4">
-              <p className="text-white font-serif text-lg tracking-wide uppercase">
+              <p className="text-white font-serif text-lg tracking-wide ">
                 {photo.alt}
               </p>
             </div>

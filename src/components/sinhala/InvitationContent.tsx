@@ -1,16 +1,16 @@
 import { motion } from 'motion/react';
 import { Music, VolumeX, Heart } from 'lucide-react';
 import { Hero } from './Hero';
-import { FloatingPetals } from './FloatingPetals';
+import { FloatingPetals } from '../FloatingPetals';
 import { CoupleDetails } from './CoupleDetails';
 import { CeremonyDetails } from './CeremonyDetails';
 import { Location } from './Location';
-import { Timeline } from './Timeline';
+import { Timeline } from '../Timeline';
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
 import { WishesSection } from './WishesSection';
-import { InviteeBanner } from './InviteeBanner';
-import { DeferredMount } from './DeferredMount';
+import { InviteeBanner } from '../InviteeBanner';
+import { DeferredMount } from '../DeferredMount';
 
 interface InvitationContentProps {
   active: boolean;
@@ -38,7 +38,7 @@ export function InvitationContent({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="font-sans text-stone-800 bg-brand-blush selection:bg-brand-plum/20"
+      className="font-sinhala-sans text-stone-800 bg-brand-blush selection:bg-brand-plum/20"
     >
       <motion.button
         initial={{ opacity: 0, scale: 0.8 }}
@@ -100,8 +100,8 @@ export function InvitationContent({
             />
           </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 mb-16 text-center">
-            <span className="text-stone-900  tracking-[0.4em] text-[10px] sm:text-[11px] font-bold drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
-              The Wait Is Almost Over
+            <span className="text-stone-900 uppercase tracking-[0.4em] text-[10px] sm:text-[11px] font-bold drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
+              මංගල දින ගණනය
             </span>
           </div>
           <div className="relative z-10">
@@ -126,8 +126,8 @@ export function InvitationContent({
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-2">Rajesh & Oshini</p>
-          <span className="text-[10px] sm:text-[11px]  tracking-[0.4em] font-sans text-stone-400 font-semibold block mb-8">
+          <p className="font-sinhala-serif text-4xl sm:text-5xl text-stone-800 mb-2">Rajesh & Oshini</p>
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.4em] font-sinhala-sans text-stone-400 font-semibold block mb-8">
             August 26, 2026
           </span>
         </footer>

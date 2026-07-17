@@ -84,7 +84,7 @@ export function EventTimeline() {
 
                     <div className="flex-1">
                       {/* Mobile Time */}
-                      <div className="md:hidden flex items-center gap-1.5 text-[#D4AF37] font-serif font-bold text-sm mb-2 uppercase tracking-widest">
+                      <div className="md:hidden flex items-center gap-1.5 text-[#D4AF37] font-serif font-bold text-sm mb-2  tracking-widest">
                         <Clock className="w-3.5 h-3.5" />
                         {event.time}
                       </div>

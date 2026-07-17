@@ -25,18 +25,18 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="inline-flex items-center gap-4 mb-6">
-              <span className="text-brand-plum  tracking-[0.4em] sm:tracking-[0.5em] text-[11px] sm:text-xs font-bold drop-shadow-sm">
-                The Sacred Union
+              <span className="text-brand-plum uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[11px] sm:text-xs font-bold drop-shadow-sm">
+                පූජනීය බැඳීම
               </span>
               <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-brand-plum/60 to-transparent" />
             </div>
 
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display text-stone-800 mb-8 leading-[1.1] drop-shadow-sm">
-                <>A Celebration of <br /><span className="italic font-light text-brand-plum">Tradition & Love</span></>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-sinhala-serif text-stone-800 mb-8 leading-[1.1] drop-shadow-sm">
+                <>සම්ප්‍රදායේ සහ <br /><span className="italic font-light text-brand-plum">ආදරයේ සැමරුමක්</span></>
             </h2>
 
-            <p className="text-stone-500/90 font-serif text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
-                We are honored to invite you to witness our union as we exchange vows surrounded by the warmth of our loved ones.
+            <p className="text-stone-500/90 font-sinhala-serif text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
+                අපගේ ආදරණීයයන්ගේ ආශිර්වාදය මැද අපගේ විවාහ මංගල්‍යයට සහභාගී වන ලෙස ඔබට ගෞරවයෙන් ආරාධනා කරමු.
             </p>
 
             {/* Premium Timeline */}
@@ -48,8 +48,8 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                   <Calendar className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    Date: August 26, 2026
+                  <h4 className="font-sinhala-serif text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
+                    දිනය: 2026 අගෝස්තු 26
                   </h4>
                 </div>
               </div>
@@ -60,15 +60,15 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                   <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
-                    Wedding Ceremony
+                  <h4 className="font-sinhala-serif text-2xl sm:text-3xl text-stone-800 mb-3 group-hover:text-brand-plum transition-colors duration-500">
+                    විවාහ මංගල්‍යය
                   </h4>
-                  <div className="space-y-1.5 text-stone-500/90 font-serif text-base sm:text-lg">
+                  <div className="space-y-1.5 text-stone-500/90 font-sinhala-serif text-base sm:text-lg">
                     <p>
-                      <span className="font-semibold text-stone-700">Time:</span> 09.30 AM - 03.30 PM
+                      <span className="font-semibold text-stone-700">වේලාව:</span> පෙ.ව. 09.30 සිට ප.ව. 03.30 දක්වා
                     </p>
                     <p className="leading-relaxed">
-                      <span className="font-semibold text-stone-700">Venue:</span> Hotel Grand Amalya,<br className="hidden sm:block" /> Homagama
+                      <span className="font-semibold text-stone-700">ස්ථානය:</span> හෝටල් ග්‍රෑන්ඩ් අමාලියා,<br className="hidden sm:block" /> හෝමාගම
                     </p>
                   </div>
                 </div>

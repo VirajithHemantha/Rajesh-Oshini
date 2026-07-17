@@ -26,7 +26,7 @@ export const Timeline: React.FC<TimelineProps> = ({ event = 'both' }) => {
   return (
     <div className="max-w-4xl mx-auto px-6">
       <div className="text-center mb-20">
-        <span className="text-brand-plum uppercase tracking-[0.4em] text-[10px] font-medium mb-4 block">
+        <span className="text-brand-plum  tracking-[0.4em] text-[10px] font-medium mb-4 block">
           {event === 'homecoming' ? "The Evening's Flow" : "The Day's Flow"}
         </span>
         <h2 className="text-5xl font-display text-stone-800 tracking-tight">

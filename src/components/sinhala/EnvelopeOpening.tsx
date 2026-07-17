@@ -191,12 +191,11 @@ export function EnvelopeOpening({
           opacity: 0.7;
         }
 
-        /* Typography */
         .text-eyebrow {
-          font-family: 'Montserrat', sans-serif;
-          font-size: 10px;
-          letter-spacing: 0.45em;
-          text-transform: ;
+          font-family: var(--font-sinhala-sans), 'Montserrat', sans-serif;
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
           color: #b89645;
           margin-bottom: 20px;
           margin-top: auto;
@@ -205,7 +204,7 @@ export function EnvelopeOpening({
         }
 
         .text-names {
-          font-family: var(--font-names), "Cinzel Decorative", serif;
+          font-family: var(--font-sinhala-serif), "Cinzel Decorative", serif;
           font-size: 60px;
           line-height: 1.1;
           color: #4a3a4d;
@@ -227,10 +226,10 @@ export function EnvelopeOpening({
         }
 
         .text-details {
-          font-family: 'Montserrat', sans-serif;
-          font-size: 9.5px;
-          letter-spacing: 0.22em;
-          text-transform: ;
+          font-family: var(--font-sinhala-sans), 'Montserrat', sans-serif;
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
           color: #b89645;
           line-height: 2.2;
           margin-bottom: auto;
@@ -239,23 +238,23 @@ export function EnvelopeOpening({
         }
 
         .text-date {
+          font-family: var(--font-sinhala-sans), 'Montserrat', sans-serif;
           display: block;
           margin: 12px 0;
           font-size: 11px;
           font-weight: 500;
-          letter-spacing: 0.28em;
+          letter-spacing: 0.1em;
           color: #b89645;
         }
 
         .text-church {
-          font-family: "Cormorant Garamond", serif;
-          font-size: 14px;
-          font-style: italic;
-          font-weight: 400;
-          letter-spacing: 0.1em;
-          color: #b89645;
+          font-family: var(--font-sinhala-sans), 'Montserrat', sans-serif;
+          display: block;
           margin-top: 4px;
-          text-transform: none;
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          color: #4a3a4d;
         }
 
         /* Envelope Fold (Left Flap) */
@@ -349,7 +348,7 @@ export function EnvelopeOpening({
           font-family: "Montserrat", sans-serif;
           font-size: 10px;
           letter-spacing: 0.35em;
-          text-transform: ;
+          text-transform: uppercase;
           opacity: 1;
           transition: opacity 0.5s;
           white-space: nowrap;
@@ -450,9 +449,9 @@ export function EnvelopeOpening({
               </div>
 
               <h1 className="text-names">
-                Rajesh
+                රාජේෂ්
                 <span className="text-ampersand">&</span>
-                Oshini
+                ඕෂිනි
               </h1>
 
               <div className="divider">
@@ -462,10 +461,10 @@ export function EnvelopeOpening({
               </div>
 
               <div className="text-details">
-                Request the honour of your presence<br />
-                to celebrate their marriage at<br />
-                <span className="text-church">Hotel Grand Amalya</span><br />
-                Homagama
+                ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරමු<br />
+                අපගේ විවාහ මංගල්‍යය සැමරීම සඳහා<br />
+                <span className="text-church">හෝටල් ග්‍රෑන්ඩ් අමාලියා</span><br />
+                හෝමාගම
               </div>
             </div>
           </div>

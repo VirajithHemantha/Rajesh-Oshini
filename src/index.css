@@ -1,19 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Anek+Sinhala:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Samarkan';
+  src: url('/Samarkan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 @theme {
-  /* Ivory/Pink/Gold Color Palette */
-  --color-brand-plum: #b89645;
-  --color-brand-lavender: #f0b9c3;
-  --color-brand-rose: #f8dbdf;
-  --color-brand-blush: #fffff4;
+  /* Pink/Silver Color Palette */
+  --color-brand-plum: #595959; /* Darker silver accent for better visibility */
+  --color-brand-lavender: #f4d3dc; /* Soft pink */
+  --color-brand-rose: #ffb6c1; /* Brush pink */
+  --color-brand-blush: #ffd1dc; /* Light brush pink background */
 
-  --font-serif: "Cormorant Garamond", serif;
-  --font-display: "Great Vibes", cursive;
-  --font-names: "Cinzel Decorative", serif;
-  --font-century: "Century", "Century Schoolbook", serif;
-  --font-sans: "Inter", sans-serif;
-  --font-playfair: "Playfair Display", serif;
+  /* Override stone palette to darker silver/charcoal shades for high contrast text */
+  --color-stone-900: #1a1a1a;
+  --color-stone-800: #2b2b2b;
+  --color-stone-700: #3f3f3f;
+  --color-stone-600: #545454;
+  --color-stone-500: #696969;
+  --color-stone-400: #808080;
+
+  --font-serif: "Samarkan", "Cormorant Garamond", serif;
+  --font-display: "Samarkan", "Great Vibes", cursive;
+  --font-names: "Samarkan", "Cinzel Decorative", serif;
+  --font-century: "Samarkan", "Century", "Century Schoolbook", serif;
+  --font-sans: "Samarkan", "Inter", sans-serif;
+  --font-playfair: "Samarkan", "Playfair Display", serif;
+  
+  --font-sinhala-serif: "Abhaya Libre", serif;
+  --font-sinhala-sans: "Anek Sinhala", sans-serif;
 }
 
 :root {

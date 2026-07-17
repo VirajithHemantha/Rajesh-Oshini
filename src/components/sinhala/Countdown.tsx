@@ -32,10 +32,10 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   return (
     <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-10 py-6">
       {[
-        { label: 'Days', value: timeLeft.days },
-        { label: 'Hours', value: timeLeft.hours },
-        { label: 'Minutes', value: timeLeft.minutes },
-        { label: 'Seconds', value: timeLeft.seconds },
+        { label: 'දින', value: timeLeft.days },
+        { label: 'පැය', value: timeLeft.hours },
+        { label: 'මිනිත්තු', value: timeLeft.minutes },
+        { label: 'තත්පර', value: timeLeft.seconds },
       ].map((item, i) => (
         <motion.div 
           key={item.label}
@@ -50,13 +50,13 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
           
           <div className="relative pt-10 pb-8 px-4 flex flex-col items-center w-full z-10 transition-transform duration-700 group-hover:-translate-y-3">
             {/* Elegant number */}
-            <span className="text-5xl sm:text-6xl lg:text-7xl font-display font-medium text-brand-plum mb-4 drop-shadow-[0_2px_4px_rgba(176,137,104,0.3)] tabular-nums tracking-wide">
+            <span className="text-5xl sm:text-6xl lg:text-7xl font-sinhala-serif font-medium text-brand-plum mb-4 drop-shadow-[0_2px_4px_rgba(176,137,104,0.3)] tabular-nums tracking-wide">
               {String(item.value).padStart(2, '0')}
             </span>
             {/* Divider line */}
             <div className="w-10 h-[1.5px] bg-gradient-to-r from-transparent via-brand-plum/50 to-transparent mb-4" />
             {/* Label */}
-            <span className="text-[10px] sm:text-xs  tracking-[0.4em] text-stone-600 font-semibold">{item.label}</span>
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.4em] text-stone-600 font-semibold">{item.label}</span>
           </div>
         </motion.div>
       ))}

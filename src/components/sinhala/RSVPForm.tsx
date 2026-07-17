@@ -73,26 +73,26 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
           <Sparkles className="absolute -top-6 -left-6 w-12 h-12 text-brand-lavender/30 animate-pulse" />
 
           <div className="inline-flex items-center justify-center lg:justify-start gap-4 mb-6">
-            <span className="text-brand-plum  tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
-              Kindly Respond
+            <span className="text-brand-plum uppercase tracking-[0.5em] text-[10px] sm:text-[11px] font-bold drop-shadow-sm">
+              කරුණාකර පැමිණීම දැනුම් දෙන්න
             </span>
             <div className="hidden lg:block w-16 h-[1px] bg-gradient-to-r from-brand-plum/60 to-transparent" />
           </div>
 
-          <h2 className="text-5xl sm:text-6xl font-display text-stone-800 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
-            Reserve <span className="italic font-light text-brand-plum">Your</span> Seat
+          <h2 className="text-5xl sm:text-6xl font-sinhala-serif text-stone-800 tracking-tight leading-[1.1] mb-6 drop-shadow-sm">
+            ආසනය <span className="italic font-light text-brand-plum">වෙන්කරගන්න</span>
           </h2>
 
-          <p className="text-stone-500/90 font-serif text-lg leading-relaxed mb-6">
+          <p className="text-stone-500/90 font-sinhala-serif text-lg leading-relaxed mb-6">
             {inviteeName
-              ? `Dear ${inviteeName}, your presence at ${eventName} means the world to us. Please kindly let us know if you will be able to join our celebration.`
-              : `Your presence means the world to us. Please kindly let us know if you will be able to join our celebration.`
+              ? `ආදරණීය ${inviteeName}, අපගේ විවාහ මංගල්‍යයට ඔබගේ පැමිණීම අපට ඉමහත් සතුටකි. කරුණාකර ඔබගේ පැමිණීම දැනුම් දෙන්න.`
+              : `අපගේ විවාහ මංගල්‍යයට ඔබගේ පැමිණීම අපට ඉමහත් සතුටකි. කරුණාකර ඔබගේ පැමිණීම දැනුම් දෙන්න.`
             }
           </p>
-          <div className="mt-6 mb-8 text-sm font-sans tracking-[0.2em]  font-semibold text-brand-plum drop-shadow-sm leading-loose">
-            RSVP BY <br />
-            076 429 1756 - Oshini <br /> 
-            076 533 9931 - Rajesh
+          <div className="mt-6 mb-8 text-sm font-sinhala-sans tracking-[0.2em] uppercase font-semibold text-brand-plum drop-shadow-sm leading-loose">
+            පැමිණීම දැනුම් දෙන්න <br />
+            076 429 1756 - ඕෂිනි <br /> 
+            076 533 9931 - රාජේෂ්
           </div>
           <div className="w-12 h-[1px] bg-brand-lavender/50 mx-auto lg:mx-0" />
         </div>
@@ -111,15 +111,15 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                 <div className="w-24 h-24 bg-green-50/80 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner border border-green-100">
                   <CheckCircle className="w-12 h-12 text-green-500" />
                 </div>
-                <h3 className="text-4xl font-display text-stone-800 mb-4 tracking-tight drop-shadow-sm">With Gratitude</h3>
-                <p className="text-stone-500/90 leading-relaxed font-serif text-lg mb-8">
-                  Your response has been warmly received. We cannot wait to celebrate with you!
+                <h3 className="text-4xl font-sinhala-serif text-stone-800 mb-4 tracking-tight drop-shadow-sm">ස්තූතියි</h3>
+                <p className="text-stone-500/90 leading-relaxed font-sinhala-serif text-lg mb-8">
+                  තහවුරු කිරීම සාර්ථකයි. ඔබගේ පැමිණීම බලාපොරොත්තුවෙන් සිටිමු!
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="px-6 py-2 rounded-full border border-brand-lavender/30 text-brand-plum font-sans text-[10px] tracking-[0.2em]  hover:bg-brand-lavender/10 transition-all duration-300 shadow-sm"
+                  className="px-6 py-2 rounded-full border border-brand-lavender/30 text-brand-plum font-sinhala-sans text-[10px] tracking-[0.2em] uppercase hover:bg-brand-lavender/10 transition-all duration-300 shadow-sm"
                 >
-                  Update Response
+                  යාවත්කාලීන කරන්න
                 </button>
               </motion.div>
             ) : (
@@ -132,22 +132,22 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                 className="space-y-6 bg-white/40 p-8 sm:p-10 rounded-[2.5rem] border border-white shadow-[0_15px_30px_rgba(0,0,0,0.05)]"
               >
                 <div>
-                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Full Name</label>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">සම්පූර්ණ නම</label>
                   <input
                     required
                     type="text"
                     placeholder="E.g., John & Jane Doe"
-                    className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 font-serif italic text-lg shadow-inner placeholder:text-stone-300"
+                    className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 font-sinhala-serif italic text-lg shadow-inner placeholder:text-stone-300"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Number of Guests</label>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">පැමිණෙන සංඛ්‍යාව</label>
                   <div className="relative group">
                     <select
-                      className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 appearance-none font-serif italic text-lg shadow-inner text-stone-700 cursor-pointer"
+                      className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 appearance-none font-sinhala-serif italic text-lg shadow-inner text-stone-700 cursor-pointer"
                       value={formData.guests}
                       onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
                     >
@@ -163,10 +163,10 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                 </div>
 
                 <div>
-                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Dietary Notes (Optional)</label>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">විශේෂ ආහාර අවශ්‍යතා (විකල්ප)</label>
                   <textarea
                     placeholder="We'd love to know if you have any allergies..."
-                    className="w-full bg-white/80 px-6 py-4 rounded-[2rem] border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 h-28 resize-none font-serif italic text-lg shadow-inner placeholder:text-stone-300"
+                    className="w-full bg-white/80 px-6 py-4 rounded-[2rem] border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 h-28 resize-none font-sinhala-serif italic text-lg shadow-inner placeholder:text-stone-300"
                     value={formData.dietaryNotes}
                     onChange={(e) => setFormData({ ...formData, dietaryNotes: e.target.value })}
                   />
@@ -176,12 +176,12 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                   <button
                     disabled={status === 'loading'}
                     type="submit"
-                    className="w-full bg-stone-800 text-brand-rose py-5 rounded-full font-sans tracking-[0.3em] font-bold text-[11px]  hover:bg-stone-900 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
+                    className="w-full bg-stone-800 text-brand-rose py-5 rounded-full font-sinhala-sans tracking-[0.3em] font-bold text-[11px] uppercase hover:bg-stone-900 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70"
                   >
                     {status === 'loading' ? (
                       <Loader2 className="w-5 h-5 animate-spin" />
                     ) : (
-                      'Confirm Attendance'
+                      'තහවුරු කරන්න'
                     )}
                   </button>
                 </div>

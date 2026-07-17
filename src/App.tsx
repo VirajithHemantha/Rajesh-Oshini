@@ -4,10 +4,13 @@ import { Toaster } from 'sonner';
 
 import { EnvelopeOpening } from './components/EnvelopeOpening';
 import { InvitationContent } from './components/InvitationContent';
+import { EnvelopeOpening as SinhalaEnvelopeOpening } from './components/sinhala/EnvelopeOpening';
+import { InvitationContent as SinhalaInvitationContent } from './components/sinhala/InvitationContent';
 import { Admin } from './components/Admin';
 import { INVITATION_IMAGE_URLS, preloadImages } from './utils/preloadImages';
 
-const isAdminRoute = () => window.location.pathname === '/admin';
+const isAdminRoute = () => window.location.pathname.startsWith('/admin');
+const isSinhalaRoute = () => window.location.pathname.startsWith('/sinhala');
 
 export default function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -24,7 +27,7 @@ export default function App() {
 
   let eventLabel = 'Our Wedding Celebration';
 
-  const weddingDate = new Date('2026-08-14T10:15:00');
+  const weddingDate = new Date('2026-08-26T09:30:00');
 
   useEffect(() => {
     if (isAdminRoute()) return;
@@ -87,6 +90,36 @@ export default function App() {
       <>
         <Toaster position="top-center" />
         <Admin />
+      </>
+    );
+  }
+
+  if (isSinhalaRoute()) {
+    return (
+      <>
+        <Toaster position="top-center" />
+
+        <SinhalaInvitationContent
+          active={showInvitation}
+          eventParam={eventParam}
+          fullInviteeName={fullInviteeName}
+          eventLabel={eventLabel}
+          weddingDate={weddingDate}
+          isMusicPlaying={isMusicPlaying}
+          onToggleMusic={toggleMusic}
+        />
+
+        <AnimatePresence mode="wait">
+          {!showInvitation && (
+            <SinhalaEnvelopeOpening
+              key="envelope"
+              onComplete={handleEnvelopeComplete}
+              onMusicStart={handleMusicStart}
+              event={eventParam}
+              readyToTransition={assetsReady}
+            />
+          )}
+        </AnimatePresence>
       </>
     );
   }

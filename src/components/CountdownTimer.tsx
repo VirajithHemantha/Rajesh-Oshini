@@ -53,7 +53,7 @@ export function CountdownTimer() {
           <div className="text-4xl sm:text-5xl font-serif text-[#183d72] mb-2 font-bold">
             {unit.value.toString().padStart(2, '0')}
           </div>
-          <div className="text-sm uppercase tracking-widest text-[#D4AF37] font-semibold">
+          <div className="text-sm  tracking-widest text-[#D4AF37] font-semibold">
             {unit.label}
           </div>
         </motion.div>

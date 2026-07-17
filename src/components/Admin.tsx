@@ -6,6 +6,7 @@ import { toast } from 'sonner';
 export const Admin: React.FC = () => {
   const [guestTitle, setGuestTitle] = useState('Mr.');
   const [guestName, setGuestName] = useState('');
+  const [isSinhala, setIsSinhala] = useState(false);
   const [generatedUrl, setGeneratedUrl] = useState('');
   const [copied, setCopied] = useState(false);
 
@@ -22,7 +23,8 @@ export const Admin: React.FC = () => {
     if (guestTitle) params.append('title', guestTitle);
     params.append('name', guestName.trim());
 
-    const fullUrl = `${baseUrl}/?${params.toString()}`;
+    const path = isSinhala ? '/sinhala' : '/';
+    const fullUrl = `${baseUrl}${path}?${params.toString()}`;
     setGeneratedUrl(fullUrl);
     setCopied(false);
     toast.success('Invitation link generated successfully!');
@@ -50,7 +52,7 @@ ${url}
 Your presence would truly mean the world to us, and we would be honored to celebrate this beautiful moment together.
 
 With love,
-❤️ Teshan & Apsara`;
+❤️ Rajesh & Oshini`;
   };
 
   const handleCopyMessageActive = () => {
@@ -77,7 +79,7 @@ With love,
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Invitation
           </a>
-          <span className="px-4 py-1.5 rounded-full bg-brand-rose border border-brand-lavender/30 text-brand-plum text-xs font-bold uppercase tracking-widest shadow-sm">
+          <span className="px-4 py-1.5 rounded-full bg-brand-rose border border-brand-lavender/30 text-brand-plum text-xs font-bold  tracking-widest shadow-sm">
             Admin Dashboard
           </span>
         </div>
@@ -86,7 +88,7 @@ With love,
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
             <Sparkles className="w-5 h-5 text-brand-plum animate-pulse" />
-            <span className="text-brand-plum uppercase tracking-[0.5em] text-xs font-bold drop-shadow-sm">Invitation Generator</span>
+            <span className="text-brand-plum  tracking-[0.5em] text-xs font-bold drop-shadow-sm">Invitation Generator</span>
             <Sparkles className="w-5 h-5 text-brand-plum animate-pulse" />
           </div>
           <h1 className="text-5xl sm:text-6xl font-display text-stone-800 tracking-tight mb-4 drop-shadow-sm">
@@ -111,7 +113,7 @@ With love,
               {/* Guest Title & Name */}
               <div className="space-y-6">
                 <div>
-                  <label className="block text-xs uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 flex items-center gap-2 ml-1">
+                  <label className="block text-xs  tracking-[0.2em] font-bold text-stone-500 mb-3 flex items-center gap-2 ml-1">
                     <User className="w-4 h-4 text-brand-plum" />
                     Guest Title
                   </label>
@@ -131,7 +133,7 @@ With love,
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-[0.2em] font-bold text-stone-500 mb-3 flex items-center gap-2 ml-1">
+                  <label className="block text-xs  tracking-[0.2em] font-bold text-stone-500 mb-3 flex items-center gap-2 ml-1">
                     <User className="w-4 h-4 text-brand-plum" />
                     Guest Name
                   </label>
@@ -146,11 +148,25 @@ With love,
                 </div>
               </div>
 
+              {/* Language Selection */}
+              <div>
+                <label className="flex items-center gap-3 cursor-pointer p-4 border border-stone-200/80 rounded-2xl hover:bg-stone-50 transition-colors">
+                  <input
+                    type="checkbox"
+                    checked={isSinhala}
+                    onChange={(e) => setIsSinhala(e.target.checked)}
+                    className="w-5 h-5 rounded border-stone-300 text-brand-plum focus:ring-brand-plum/30"
+                  />
+                  <span className="font-sans text-sm font-semibold text-stone-700 tracking-wide">
+                    Generate Sinhala Version Link (/sinhala)
+                  </span>
+                </label>
+              </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-stone-800 text-brand-rose py-5 rounded-full font-sans tracking-[0.3em] font-bold text-xs uppercase hover:bg-stone-900 transition-all shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3"
+                className="w-full bg-stone-800 text-brand-rose py-5 rounded-full font-sans tracking-[0.3em] font-bold text-xs  hover:bg-stone-900 transition-all shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] active:scale-[0.98] flex items-center justify-center gap-3"
               >
                 <LinkIcon className="w-4 h-4 text-brand-plum" />
                 Generate Invitation Link
@@ -175,7 +191,7 @@ With love,
               {generatedUrl ? (
                 <div className="space-y-6 animate-fadeIn">
                   <div className="p-5 bg-stone-50 rounded-2xl border border-stone-200/80 shadow-inner">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-brand-plum mb-3 flex items-center gap-2">
+                    <p className="text-[10px] font-bold  tracking-widest text-brand-plum mb-3 flex items-center gap-2">
                       <Sparkles className="w-3 h-3" /> WhatsApp Message Preview
                     </p>
                     <div className="text-sm text-stone-700 font-serif whitespace-pre-wrap leading-relaxed bg-white/60 p-4 rounded-xl border border-stone-100">
@@ -186,14 +202,14 @@ With love,
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={() => handleCopy(generatedUrl)}
-                      className="flex-1 bg-brand-plum text-white py-3.5 px-6 rounded-full font-sans tracking-[0.2em] font-bold text-[11px] uppercase hover:bg-brand-plum/90 transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
+                      className="flex-1 bg-brand-plum text-white py-3.5 px-6 rounded-full font-sans tracking-[0.2em] font-bold text-[11px]  hover:bg-brand-plum/90 transition-all shadow-md flex items-center justify-center gap-2 active:scale-95"
                     >
                       {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       {copied ? 'Copied!' : 'Copy Link Only'}
                     </button>
                     <button
                       onClick={handleCopyMessageActive}
-                      className="flex-1 bg-brand-rose text-brand-plum py-3.5 px-6 rounded-full font-sans tracking-[0.2em] font-bold text-[11px] uppercase hover:bg-brand-rose/90 transition-all shadow-sm border border-brand-lavender/30 flex items-center justify-center gap-2 active:scale-95"
+                      className="flex-1 bg-brand-rose text-brand-plum py-3.5 px-6 rounded-full font-sans tracking-[0.2em] font-bold text-[11px]  hover:bg-brand-rose/90 transition-all shadow-sm border border-brand-lavender/30 flex items-center justify-center gap-2 active:scale-95"
                     >
                       <Copy className="w-4 h-4" />
                       Copy Full Message

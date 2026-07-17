@@ -49,7 +49,7 @@ export const Gallery: React.FC = () => {
         >
           <div className="inline-flex items-center gap-4 mb-4 sm:mb-6 justify-center">
             <div className="w-12 sm:w-24 h-[1px] bg-gradient-to-r from-transparent to-brand-plum/60" />
-            <span className="text-brand-plum uppercase tracking-[0.5em] sm:tracking-[0.6em] text-[10px] sm:text-[11px] font-bold font-sans drop-shadow-sm">A Lifetime OF</span>
+            <span className="text-brand-plum  tracking-[0.5em] sm:tracking-[0.6em] text-[10px] sm:text-[11px] font-bold font-sans drop-shadow-sm">A Lifetime OF</span>
             <div className="w-12 sm:w-24 h-[1px] bg-gradient-to-l from-transparent to-brand-plum/60" />
           </div>
           <h2 className="text-5xl sm:text-7xl lg:text-[5.5rem] font-display text-stone-800 tracking-tight drop-shadow-sm leading-tight">

@@ -22,7 +22,7 @@ export const InviteeBanner: React.FC<InviteeBannerProps> = ({ inviteeName, event
         >
           <div className="inline-flex items-center gap-3 mb-4">
             <Sparkles className="w-4 h-4 text-brand-plum animate-pulse" />
-            <span className="text-brand-plum uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[10px] sm:text-xs font-bold drop-shadow-sm">
+            <span className="text-brand-plum  tracking-[0.4em] sm:tracking-[0.5em] text-[10px] sm:text-xs font-bold drop-shadow-sm">
               Specially Invited Guest
             </span>
             <Sparkles className="w-4 h-4 text-brand-plum animate-pulse" />
