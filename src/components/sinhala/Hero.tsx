@@ -91,10 +91,10 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] sm:w-[125%] h-[150%] sm:h-[160%] bg-gradient-radial from-white/95 via-white/85 to-transparent blur-[40px] sm:blur-[70px] rounded-full pointer-events-none" />
 
             <h1 className="relative text-4xl sm:text-[5.5rem] lg:text-[7.5rem] font-sinhala-serif text-[#595959] font-normal leading-normal sm:leading-[0.85] drop-shadow-[0_4px_16px_rgba(255,255,255,0.9)] tracking-normal sm:tracking-tight overflow-visible py-2">
-              රාජේෂ් <br className="sm:hidden" />
+              <span className="inline-flex items-center gap-2 sm:gap-4">රාජේෂ් <Heart className="w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-brand-rose fill-brand-rose/50 animate-pulse drop-shadow-md" /></span> <br className="sm:hidden" />
               <span className="text-[#595959] font-normal mx-2 sm:mx-6 text-3xl sm:text-[4.5rem] lg:text-[6rem] inline-block -translate-y-1 sm:-translate-y-6 drop-shadow-[0_4px_12px_rgba(89,89,89,0.3)]">&</span>
               <br className="sm:hidden" />
-              ඕෂිනි
+              <span className="inline-flex items-center gap-2 sm:gap-4">ඕෂිනි <Heart className="w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20 text-brand-rose fill-brand-rose/50 animate-pulse drop-shadow-md" /></span>
             </h1>
           </div>
 
@@ -102,7 +102,11 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
             <div className="hidden sm:block h-[1px] w-16 bg-gradient-to-r from-transparent via-brand-plum to-transparent" />
             <p className="text-[1.15rem] sm:text-2xl font-sinhala-serif italic text-stone-900 font-bold tracking-wide px-2 text-center max-w-xl leading-relaxed drop-shadow-sm">
               {inviteeName 
-                ? `අපගේ විවාහ මංගල්‍යයට සහභාගී වන ලෙස ${inviteeName} ට ආදරයෙන් ආරාධනා කරමු`
+                ? `අපගේ සුන්දර දිනය සැමරීමට ${
+                    inviteeName.endsWith("ඔබ දෙපළට") ? "ඔබ දෙපළට" :
+                    inviteeName.endsWith("ඔබ සැමට") ? "ඔබ සැමට" :
+                    "ඔබට"
+                  } ගෞරවයෙන් ආරාධනා කරමු.`
                 : "අපගේ පවුල් වල ආශිර්වාදය සමඟින්, අපගේ විවාහ මංගල්‍යයට සහභාගී වන ලෙස ඔබට ආදරයෙන් ආරාධනා කරමු"
               }
             </p>
@@ -111,7 +115,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
 
           <div className="flex flex-col items-center gap-6 relative z-10">
             <div className="flex items-center gap-4 text-stone-700/90 font-sinhala-serif text-lg sm:text-xl font-medium px-6 py-2 bg-white/40 rounded-full">
-              <span className="tracking-wide">හෝටල් ග්‍රෑන්ඩ් අමාලියා • හෝමාගම</span>
+              <span className="tracking-wide">හෝටල් ග්‍රෑන්ඩ් අමල්යා • හෝමාගම</span>
             </div>
             
             <div className="flex items-center gap-3">
@@ -122,16 +126,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
-        >
-          <span className="text-[10px] sm:text-xs uppercase tracking-[0.4em] text-brand-plum font-semibold">
-            පිවිසෙන්න
-          </span>    
-        </motion.div>
+
       </motion.div>
 
       <div className="absolute left-6 sm:left-12 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-6 z-30">
@@ -154,17 +149,6 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
         <div className="w-[1px] h-28 bg-gradient-to-t from-transparent via-brand-plum to-transparent" />
       </div>
 
-      <motion.div
-        className="absolute bottom-0 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-30"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.6 }}
-      >
-        <span className="text-[9px] sm:text-[10px] font-sinhala-sans uppercase tracking-[0.5em] text-stone-900 font-extrabold bg-gradient-to-r from-brand-rose via-white to-brand-rose px-5 py-2 rounded-full border border-brand-plum/40 backdrop-blur-md shadow-lg">
-          Discover
-        </span>
-        <div className="w-[1px] h-6 sm:h-16 bg-gradient-to-b from-brand-plum to-transparent animate-bounce" />
-      </motion.div>
     </div>
   );
 };

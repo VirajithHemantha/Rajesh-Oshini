@@ -6,7 +6,6 @@ import { toast } from 'sonner';
 export const Admin: React.FC = () => {
   const [guestTitle, setGuestTitle] = useState('Mr.');
   const [guestName, setGuestName] = useState('');
-  const [isSinhala, setIsSinhala] = useState(false);
   const [generatedUrl, setGeneratedUrl] = useState('');
   const [copied, setCopied] = useState(false);
 
@@ -23,7 +22,7 @@ export const Admin: React.FC = () => {
     if (guestTitle) params.append('title', guestTitle);
     params.append('name', guestName.trim());
 
-    const path = isSinhala ? '/sinhala' : '/';
+    const path = '/';
     const fullUrl = `${baseUrl}${path}?${params.toString()}`;
     setGeneratedUrl(fullUrl);
     setCopied(false);
@@ -79,9 +78,17 @@ With love,
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Invitation
           </a>
-          <span className="px-4 py-1.5 rounded-full bg-brand-rose border border-brand-lavender/30 text-brand-plum text-xs font-bold  tracking-widest shadow-sm">
-            Admin Dashboard
-          </span>
+          <div className="flex gap-3">
+            <a
+              href="/sinhala/admin"
+              className="px-6 py-2 rounded-full bg-white border border-brand-lavender/30 text-stone-600 hover:text-brand-plum text-[11px] font-bold tracking-widest shadow-sm font-sans uppercase transition-all"
+            >
+              Sinhala
+            </a>
+            <span className="px-6 py-2 rounded-full bg-brand-rose border border-brand-lavender/30 text-brand-plum text-[11px] font-bold tracking-widest shadow-sm uppercase font-sans">
+              English
+            </span>
+          </div>
         </div>
 
         {/* Main Header */}
@@ -148,20 +155,7 @@ With love,
                 </div>
               </div>
 
-              {/* Language Selection */}
-              <div>
-                <label className="flex items-center gap-3 cursor-pointer p-4 border border-stone-200/80 rounded-2xl hover:bg-stone-50 transition-colors">
-                  <input
-                    type="checkbox"
-                    checked={isSinhala}
-                    onChange={(e) => setIsSinhala(e.target.checked)}
-                    className="w-5 h-5 rounded border-stone-300 text-brand-plum focus:ring-brand-plum/30"
-                  />
-                  <span className="font-sans text-sm font-semibold text-stone-700 tracking-wide">
-                    Generate Sinhala Version Link (/sinhala)
-                  </span>
-                </label>
-              </div>
+
 
               {/* Submit Button */}
               <button

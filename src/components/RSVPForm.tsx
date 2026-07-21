@@ -12,7 +12,7 @@ interface RSVPFormProps {
 export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName = 'the celebration', eventParam = 'both' }) => {
   const [formData, setFormData] = useState({
     fullName: inviteeName,
-    guests: '1',
+    guests: 'Accepted',
     dietaryNotes: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -91,8 +91,15 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
           </p>
           <div className="mt-6 mb-8 text-sm font-sans tracking-[0.2em]  font-semibold text-brand-plum drop-shadow-sm leading-loose">
             RSVP BY <br />
-            076 429 1756 - Oshini <br /> 
-            076 533 9931 - Rajesh
+            <span className="inline-flex items-center gap-1.5">
+              071 899 0301 - Oshini
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="text-green-500"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+            </span>
+            <br />
+            <span className="inline-flex items-center gap-1.5 mt-1">
+              077 966 5529 - Shalini
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="text-green-500"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+            </span>
           </div>
           <div className="w-12 h-[1px] bg-brand-lavender/50 mx-auto lg:mx-0" />
         </div>
@@ -144,32 +151,20 @@ export const RSVPForm: React.FC<RSVPFormProps> = ({ inviteeName = '', eventName 
                 </div>
 
                 <div>
-                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Number of Guests</label>
+                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Attendance</label>
                   <div className="relative group">
                     <select
                       className="w-full bg-white/80 px-6 py-4 rounded-full border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 appearance-none font-serif italic text-lg shadow-inner text-stone-700 cursor-pointer"
                       value={formData.guests}
                       onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
                     >
-                      <option value="1">Just Me (1 Guest)</option>
-                      <option value="2">We are coming! (2 Guests)</option>
-                      <option value="3">3 Guests</option>
-                      <option value="4">4 Guests</option>
+                      <option value="Accepted">Joyfully Accept</option>
+                      <option value="Declined">Regretfully Decline</option>
                     </select>
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-plum transition-transform duration-300 group-hover:scale-110">
                       <Heart className="w-5 h-5 fill-brand-lavender/30 drop-shadow-sm" />
                     </div>
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px]  tracking-[0.2em] font-bold text-stone-500 mb-3 ml-2">Dietary Notes (Optional)</label>
-                  <textarea
-                    placeholder="We'd love to know if you have any allergies..."
-                    className="w-full bg-white/80 px-6 py-4 rounded-[2rem] border border-stone-200/60 focus:ring-2 focus:ring-brand-lavender/30 focus:border-brand-plum/40 outline-none transition-all duration-300 h-28 resize-none font-serif italic text-lg shadow-inner placeholder:text-stone-300"
-                    value={formData.dietaryNotes}
-                    onChange={(e) => setFormData({ ...formData, dietaryNotes: e.target.value })}
-                  />
                 </div>
 
                 <div className="pt-4">

@@ -10,7 +10,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "හෝටල් ග්‍රෑන්ඩ් අමාලියා",
+      name: "හෝටල් ග්‍රෑන්ඩ් අමල්යා",
       city: "හෝමාගම",
       quote: `"අපගේ විවාහ මංගල්‍යය වෙනුවෙන් තෝරාගත් සුන්දර ස්ථානය."`,
       liveLocationUrl: "https://maps.app.goo.gl/uHSQLuoqYCgzdRaa9",

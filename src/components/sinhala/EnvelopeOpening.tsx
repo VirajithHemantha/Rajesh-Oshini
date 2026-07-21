@@ -463,7 +463,7 @@ export function EnvelopeOpening({
               <div className="text-details">
                 ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරමු<br />
                 අපගේ විවාහ මංගල්‍යය සැමරීම සඳහා<br />
-                <span className="text-church">හෝටල් ග්‍රෑන්ඩ් අමාලියා</span><br />
+                <span className="text-church">හෝටල් ග්‍රෑන්ඩ් අමල්යා</span><br />
                 හෝමාගම
               </div>
             </div>

@@ -8,8 +8,8 @@ import { Location } from './Location';
 import { Timeline } from '../Timeline';
 import { Countdown } from './Countdown';
 import { RSVPForm } from './RSVPForm';
-import { WishesSection } from './WishesSection';
-import { InviteeBanner } from '../InviteeBanner';
+
+import { InviteeBanner } from './InviteeBanner';
 import { DeferredMount } from '../DeferredMount';
 
 interface InvitationContentProps {
@@ -20,6 +20,7 @@ interface InvitationContentProps {
   weddingDate: Date;
   isMusicPlaying: boolean;
   onToggleMusic: () => void;
+  guestName: string;
 }
 
 export function InvitationContent({
@@ -30,6 +31,7 @@ export function InvitationContent({
   weddingDate,
   isMusicPlaying,
   onToggleMusic,
+  guestName,
 }: InvitationContentProps) {
   if (!active) return null;
 
@@ -112,15 +114,11 @@ export function InvitationContent({
 
       <DeferredMount active={active} delay={420} minHeight="30vh">
         <div className="py-24 sm:py-32 bg-brand-blush relative overflow-hidden">
-          <RSVPForm inviteeName={fullInviteeName} eventName={eventLabel} eventParam={eventParam} />
+          <RSVPForm inviteeName={guestName} eventName={eventLabel} eventParam={eventParam} />
         </div>
       </DeferredMount>
 
-      <DeferredMount active={active} delay={480} minHeight="30vh">
-        <div className="py-24 sm:py-32 bg-gradient-to-b from-brand-blush to-white relative mt-10 overflow-hidden">
-          <WishesSection eventParam={eventParam} inviteeName={fullInviteeName} />
-        </div>
-      </DeferredMount>
+
 
       <DeferredMount active={active} delay={520}>
         <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">

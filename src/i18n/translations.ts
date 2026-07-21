@@ -70,7 +70,7 @@ export const translations = {
       celebration: "ආදරයේ සැමරුම",
       groom: "රාජේෂ්",
       bride: "ඕෂිනි",
-      location: "හෝටල් ග්‍රෑන්ඩ් අමාලියා • හෝමාගම",
+      location: "හෝටල් ග්‍රෑන්ඩ් අමල්යා • හෝමාගම",
       date: "දිනය වෙන්කරගන්න • 2026 අගෝස්තු",
       discover: "පිවිසෙන්න",
       inviteNamed: (name: string) => `අපගේ විවාහ මංගල්‍යයට සහභාගී වන ලෙස ${name} ට ආදරයෙන් ආරාධනා කරමු`,
@@ -95,13 +95,13 @@ export const translations = {
       time: "පෙ.ව. 09.30 සිට ප.ව. 03.30 දක්වා",
       timeLabel: "වේලාව:",
       venueLabel: "ස්ථානය:",
-      venueLine1: "හෝටල් ග්‍රෑන්ඩ් අමාලියා,",
+      venueLine1: "හෝටල් ග්‍රෑන්ඩ් අමල්යා,",
       venueLine2: "හෝමාගම"
     },
     location: {
       whereWeCelebrate: "සැමරුම්",
       celebrate: "ස්ථානය",
-      venueName: "හෝටල් ග්‍රෑන්ඩ් අමාලියා",
+      venueName: "හෝටල් ග්‍රෑන්ඩ් අමල්යා",
       venueCity: "හෝමාගම",
       quote: `"අපගේ විවාහ මංගල්‍යය වෙනුවෙන් තෝරාගත් සුන්දර ස්ථානය."`,
       openLiveLocation: "සජීවී සිතියම බලන්න",
@@ -125,7 +125,7 @@ export const translations = {
     envelope: {
       requestHonour: "ඔබගේ පැමිණීම ගෞරවයෙන් අපේක්ෂා කරමු",
       toCelebrate: "අපගේ විවාහ මංගල්‍යය සැමරීම සඳහා",
-      venueName: "හෝටල් ග්‍රෑන්ඩ් අමාලියා",
+      venueName: "හෝටල් ග්‍රෑන්ඩ් අමල්යා",
       venueCity: "හෝමාගම"
     }
   }

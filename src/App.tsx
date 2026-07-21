@@ -9,8 +9,11 @@ import { InvitationContent as SinhalaInvitationContent } from './components/sinh
 import { Admin } from './components/Admin';
 import { INVITATION_IMAGE_URLS, preloadImages } from './utils/preloadImages';
 
+import { Admin as SinhalaAdmin } from './components/sinhala/Admin';
+
 const isAdminRoute = () => window.location.pathname.startsWith('/admin');
-const isSinhalaRoute = () => window.location.pathname.startsWith('/sinhala');
+const isSinhalaAdminRoute = () => window.location.pathname.startsWith('/sinhala/admin');
+const isSinhalaRoute = () => window.location.pathname.startsWith('/sinhala') && !window.location.pathname.startsWith('/sinhala/admin');
 
 export default function App() {
   const [showInvitation, setShowInvitation] = useState(false);
@@ -23,7 +26,10 @@ export default function App() {
   const nameParam = params.get('name') || '';
   const eventParam = params.get('event') || 'both';
 
-  const fullInviteeName = `${titleParam} ${nameParam}`.trim();
+  const isSinhala = window.location.pathname.startsWith('/sinhala');
+  const fullInviteeName = isSinhala
+    ? `${nameParam} ${titleParam}`.trim()
+    : `${titleParam} ${nameParam}`.trim();
 
   let eventLabel = 'Our Wedding Celebration';
 
@@ -47,7 +53,7 @@ export default function App() {
     if (!audioRef.current) {
       const isSinhala = window.location.pathname === '/sinhala';
       const audioFile = isSinhala 
-        ? "/Randunuke Malase - Live  Official Music Video  MEntertainments  Clarence Wijewardena.mp3"
+        ? "/Randunuke Malase - Live  Official Music Video  MEntertainments  Clarence Wijewardena (1).mp3"
         : "/Beautiful In White, lyrics  Shane Filan 418 Let's sing and learn English..mp3";
         
       audioRef.current = new Audio(audioFile);
@@ -99,6 +105,15 @@ export default function App() {
     );
   }
 
+  if (isSinhalaAdminRoute()) {
+    return (
+      <>
+        <Toaster position="top-center" />
+        <SinhalaAdmin />
+      </>
+    );
+  }
+
   if (isSinhalaRoute()) {
     return (
       <>
@@ -108,6 +123,7 @@ export default function App() {
           active={showInvitation}
           eventParam={eventParam}
           fullInviteeName={fullInviteeName}
+          guestName={nameParam}
           eventLabel={eventLabel}
           weddingDate={weddingDate}
           isMusicPlaying={isMusicPlaying}
@@ -137,6 +153,7 @@ export default function App() {
         active={showInvitation}
         eventParam={eventParam}
         fullInviteeName={fullInviteeName}
+        guestName={nameParam}
         eventLabel={eventLabel}
         weddingDate={weddingDate}
         isMusicPlaying={isMusicPlaying}
